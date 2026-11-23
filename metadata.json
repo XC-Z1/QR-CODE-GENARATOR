@@ -1,0 +1,6 @@
+{
+  "name": "QR Code Generator",
+  "description": "Create. Customize. Connect. Professional QR code creation studio, customizer, scanner, and analytics platform.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
