@@ -137,7 +137,12 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
   };
 
   return (
-    <div className="min-h-screen flex light-app-bg dark:bg-[#090E1A] text-[#0F172A] dark:text-[#F4F7FF] transition-colors">
+    <div className="min-h-screen flex relative isolate bg-[#EAE8FF] dark:bg-[#07090E] text-[#0F172A] dark:text-[#F4F7FF] transition-colors">
+      {/* Viewport-locked background image layer so background stays stationary on scroll */}
+      <div
+        aria-hidden="true"
+        className="studio-fixed-bg fixed inset-0 -z-10 pointer-events-none"
+      />
       {/* Desktop Collapsible Sidebar */}
       <aside
         aria-label="Primary navigation"

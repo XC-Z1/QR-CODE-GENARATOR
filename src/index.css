@@ -64,27 +64,29 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Light Mode Luminous Wave Canvas Background (Dark mode uses clean deep navy) */
-.light-app-bg {
+/* Viewport-Locked Fixed Backdrop (never scrolls with page content on desktop or mobile) */
+.studio-fixed-bg {
   background-color: #EAE8FF;
   background-image:
     linear-gradient(180deg, rgba(246, 246, 255, 0.22) 0%, rgba(238, 240, 255, 0.14) 100%),
     url('/assets/aistudio/file_0000000032c0820885a040a758c08d7f_e712cde6.png');
   background-size: cover;
   background-position: center top;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-.dark .light-app-bg {
+.dark .studio-fixed-bg {
   background-color: #07090E;
   background-image:
-    linear-gradient(180deg, rgba(6, 8, 13, 0.16) 0%, rgba(6, 8, 13, 0.28) 100%),
+    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.03) 0%, rgba(6, 8, 13, 0.2) 70%, rgba(5, 7, 12, 0.38) 100%),
     url('/assets/aistudio/04bf72dbd6c361e9725de9d612c9016b_07f021cc.jpg');
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* Frosted Translucent Glassmorphism (Light Mode) */
