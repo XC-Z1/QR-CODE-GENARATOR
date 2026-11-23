@@ -43,15 +43,10 @@ export default defineConfig(() => {
           if (!rawOrigin) {
             return html;
           }
-          return html
-            .replace(
-              /content="\/assets\/aistudio\/IMG-20261123-WA0001_c03954df\.jpg"/g,
-              `content="${rawOrigin}/assets/aistudio/IMG-20261123-WA0001_c03954df.jpg"`,
-            )
-            .replace(
-              /"image": "\/assets\/aistudio\/IMG-20261123-WA0001_c03954df\.jpg"/g,
-              `"image": "${rawOrigin}/assets/aistudio/IMG-20261123-WA0001_c03954df.jpg"`,
-            );
+          return html.replace(
+            /https:\/\/qr-code-generator-inky\.vercel\.app/g,
+            rawOrigin,
+          );
         },
       },
     ],
