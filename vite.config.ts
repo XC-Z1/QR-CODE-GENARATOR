@@ -27,6 +27,33 @@ export default defineConfig(() => {
           }
         },
       },
+      {
+        name: 'resolve-og-image-origin',
+        transformIndexHtml(html: string): string {
+          const vercelProd = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+          const vercelUrl = process.env.VERCEL_URL;
+          const appUrl = process.env.APP_URL;
+          const rawOrigin = vercelProd
+            ? `https://${vercelProd}`
+            : vercelUrl
+            ? `https://${vercelUrl}`
+            : appUrl && appUrl !== 'MY_APP_URL'
+            ? appUrl.replace(/\/+$/, '')
+            : '';
+          if (!rawOrigin) {
+            return html;
+          }
+          return html
+            .replace(
+              /content="\/assets\/aistudio\/IMG-20261123-WA0001_c03954df\.jpg"/g,
+              `content="${rawOrigin}/assets/aistudio/IMG-20261123-WA0001_c03954df.jpg"`,
+            )
+            .replace(
+              /"image": "\/assets\/aistudio\/IMG-20261123-WA0001_c03954df\.jpg"/g,
+              `"image": "${rawOrigin}/assets/aistudio/IMG-20261123-WA0001_c03954df.jpg"`,
+            );
+        },
+      },
     ],
     resolve: {
       alias: {

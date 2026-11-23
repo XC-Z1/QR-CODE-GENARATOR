@@ -4,6 +4,7 @@ import { StudioProvider, useStudio } from './hooks/useStudioState';
 import { ErrorBoundary } from './components/shared/ErrorBoundary';
 import { AppShell } from './components/layout/AppShell';
 import { ToastContainer } from './components/shared/ToastContainer';
+import { NetworkStatusOverlay } from './components/shared/NetworkStatusOverlay';
 import { DashboardPage } from './pages/DashboardPage';
 import { GeneratorPage } from './pages/GeneratorPage';
 import { ImageToQRPage } from './pages/ImageToQRPage';
@@ -71,6 +72,7 @@ export default function App() {
           <ActivePageRouter />
         </AppShell>
         <ToastContainer />
+        <NetworkStatusOverlay />
       </StudioProvider>
     </ErrorBoundary>
   );

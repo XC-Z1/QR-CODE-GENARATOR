@@ -216,14 +216,18 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Header */}
         <header className="sticky top-0 z-30 h-14 lg:h-16 px-4 lg:px-8 border-b border-white/80 dark:border-[#232F4A] studio-chrome bg-white/60 dark:bg-[#11192C]/90 backdrop-blur-xl flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              aria-label="Open navigation menu"
-              className="lg:hidden w-9 h-9 rounded-xl border border-[#5D4CEB]/18 dark:border-[#232F4A] bg-white/85 dark:bg-[#17223B] hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] shadow-[0_2px_10px_-3px_rgba(85,56,238,0.16)] text-[#171B2B] dark:text-[#F4F7FF] transition-colors flex items-center justify-center shrink-0"
+              onClick={() => handleNav('dashboard')}
+              aria-label="QR Code Generator Home"
+              className="lg:hidden w-10 h-10 bg-transparent border-0 p-0 hover:scale-105 transition-transform flex items-center justify-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5538EE] rounded-lg"
             >
-              <Menu className="w-[18px] h-[18px]" />
+              <img
+                src="/assets/aistudio/Gemini_Generated_Image_gph4jrgph4jrgph4_718229a5.png"
+                alt="QR Code Generator Logo"
+                className="w-full h-full object-contain drop-shadow-[0_2px_6px_rgba(15,23,42,0.22)] dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.26)]"
+              />
             </button>
             <div className="flex items-center gap-2 min-w-0 text-sm">
               <span className="hidden sm:inline text-[#747D91] dark:text-[#A4ADC1]">Studio</span>
