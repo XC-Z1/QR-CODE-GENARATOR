@@ -138,16 +138,16 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
 
   return (
     <>
-      {/* Viewport-locked background image layer (separate from shell stacking context for reliable mobile backdrop-filter) */}
+      {/* Viewport-locked background image layer (root -z-10 avoids stacking-context isolation for Android Chrome backdrop-filter) */}
       <div
         aria-hidden="true"
-        className="studio-fixed-bg fixed inset-0 z-0 pointer-events-none"
+        className="studio-fixed-bg fixed inset-0 -z-10 pointer-events-none"
       />
-      <div className="min-h-screen flex relative z-10 text-[#0F172A] dark:text-[#F4F7FF] transition-colors">
+      <div className="min-h-screen flex text-[#0F172A] dark:text-[#F4F7FF]">
         {/* Desktop Collapsible Sidebar */}
       <aside
         aria-label="Primary navigation"
-        className={`hidden lg:flex flex-col shrink-0 border-r border-white/80 dark:border-[#232F4A] studio-chrome bg-white/60 dark:bg-[#11192C] backdrop-blur-xl sticky top-0 h-screen transition-[width] duration-200 ${
+        className={`hidden lg:flex flex-col shrink-0 border-r border-white/80 dark:border-[#232F4A] studio-chrome sticky top-0 h-screen transition-[width] duration-200 ${
           collapsed ? 'w-[74px]' : 'w-[248px]'
         }`}
       >
@@ -216,7 +216,7 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
       {/* Main Column */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Header */}
-        <header className="sticky top-0 z-30 h-14 lg:h-16 px-4 lg:px-8 border-b border-white/80 dark:border-[#232F4A] studio-chrome bg-white/60 dark:bg-[#11192C]/90 backdrop-blur-xl flex items-center justify-between gap-4">
+        <header className="sticky top-0 z-30 h-14 lg:h-16 px-4 lg:px-8 border-b border-white/80 dark:border-[#232F4A] studio-chrome flex items-center justify-between gap-4">
           <div className="flex items-center gap-2.5 min-w-0">
             <button
               type="button"
@@ -477,7 +477,7 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
       {/* Mobile Bottom Navigation */}
       <nav
         aria-label="Mobile bottom navigation"
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 h-16 studio-chrome bg-white/68 dark:bg-[#11192C]/92 backdrop-blur-xl border-t border-white/85 dark:border-[#232F4A] shadow-[0_-8px_28px_-10px_rgba(85,56,238,0.14)] grid grid-cols-5 items-center px-1.5"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 h-16 studio-chrome border-t border-white/85 dark:border-[#232F4A] shadow-[0_-8px_28px_-10px_rgba(85,56,238,0.14)] grid grid-cols-5 items-center px-1.5"
       >
         {[
           { id: 'dashboard' as NavRoute, label: 'Home', icon: Home, isHome: true },

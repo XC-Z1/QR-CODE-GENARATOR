@@ -115,7 +115,7 @@ export const DashboardPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate('templates')}
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 text-[13px] sm:text-sm font-semibold rounded-full border border-white/90 dark:border-white/20 bg-white/65 dark:bg-white/10 backdrop-blur-xl text-[#0F172A] dark:text-[#F4F7FF] hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] shadow-xs transition-colors whitespace-nowrap"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 text-[13px] sm:text-sm font-semibold rounded-full border border-white/85 dark:border-white/25 bg-white/45 dark:bg-white/10 text-[#0F172A] dark:text-[#F4F7FF] hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] shadow-xs transition-colors whitespace-nowrap"
               >
                 <Layers className="w-4 h-4" />
                 Explore Templates
@@ -188,7 +188,7 @@ export const DashboardPage: React.FC = () => {
           return (
             <div
               key={card.label}
-              className="rounded-xl bg-white/82 dark:bg-[#11192C] border border-white/85 dark:border-[#232F4A] studio-card hover:-translate-y-0.5 transition-[transform,border-color] duration-150 p-5 flex flex-col justify-between"
+              className="rounded-xl border border-white/85 dark:border-[#232F4A] studio-card hover:-translate-y-0.5 transition-[transform,border-color] duration-150 p-5 flex flex-col justify-between"
             >
               <div className="flex items-center justify-between gap-2 mb-3">
                 <span className="text-xs font-semibold text-[#5C667E] dark:text-[#A4ADC1]">
@@ -217,7 +217,7 @@ export const DashboardPage: React.FC = () => {
           <button
             type="button"
             onClick={() => openInGenerator({ type: 'url' })}
-            className="px-3 py-1 rounded-full bg-white/85 dark:bg-[#17223B]/85 backdrop-blur-md border border-white/90 dark:border-[#232F4A] text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs inline-flex items-center gap-1 transition-colors"
+            className="px-3 py-1 rounded-full bg-white/65 dark:bg-white/10 border border-white/85 dark:border-white/20 text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs inline-flex items-center gap-1 transition-colors"
           >
             All 31 Content Types <ArrowRight className="w-3.5 h-3.5" />
           </button>
@@ -231,7 +231,7 @@ export const DashboardPage: React.FC = () => {
                 key={item.type}
                 type="button"
                 onClick={() => openInGenerator({ type: item.type })}
-                className="group rounded-xl bg-white/82 dark:bg-[#11192C] border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
+                className="group rounded-xl border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
               >
                 <div className="w-9 h-9 rounded-lg bg-[#F0F2F8] dark:bg-[#19243A] text-[#5538EE] dark:text-[#8978FF] flex items-center justify-center group-hover:bg-[#5538EE] group-hover:text-white transition-colors">
                   <Icon className="w-4 h-4" />
@@ -245,7 +245,7 @@ export const DashboardPage: React.FC = () => {
           <button
             type="button"
             onClick={() => openInGenerator({ type: 'calendar-event' })}
-            className="group rounded-xl bg-white/82 dark:bg-[#11192C] border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
+            className="group rounded-xl border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
           >
             <div className="w-9 h-9 rounded-lg bg-[#F0F2F8] dark:bg-[#19243A] text-[#747D91] dark:text-[#A4ADC1] flex items-center justify-center group-hover:bg-[#5538EE] group-hover:text-white transition-colors">
               <MoreHorizontal className="w-4 h-4" />
@@ -268,7 +268,7 @@ export const DashboardPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate('library')}
-                className="px-3 py-1 rounded-full bg-white/85 dark:bg-[#17223B]/85 backdrop-blur-md border border-white/90 dark:border-[#232F4A] text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs transition-colors"
+                className="px-3 py-1 rounded-full bg-white/65 dark:bg-white/10 border border-white/85 dark:border-white/20 text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs transition-colors"
               >
                 View Library ({qrs.length})
               </button>
@@ -292,7 +292,7 @@ export const DashboardPage: React.FC = () => {
                 return (
                   <div
                     key={qr.id}
-                    className="rounded-xl bg-white/82 dark:bg-[#121A2D] backdrop-blur-md border border-white/85 dark:border-[#29344B] studio-card p-4 flex items-center gap-4 relative"
+                    className="rounded-xl border border-white/85 dark:border-[#29344B] studio-card p-4 flex items-center gap-4 relative"
                   >
                     <QRPreviewCard data={qr.encodedValue} style={qr.style} size={72} bordered={false} />
                     <div className="flex-1 min-w-0">
@@ -382,14 +382,14 @@ export const DashboardPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate('activity')}
-                className="px-3 py-1 rounded-full bg-white/85 dark:bg-[#17223B]/85 backdrop-blur-md border border-white/90 dark:border-[#232F4A] text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs transition-colors"
+                className="px-3 py-1 rounded-full bg-white/65 dark:bg-white/10 border border-white/85 dark:border-white/20 text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs transition-colors"
               >
                 View All
               </button>
             )}
           </div>
 
-          <div className="rounded-xl bg-white/82 dark:bg-[#121A2D] backdrop-blur-md border border-white/85 dark:border-[#29344B] studio-card p-4">
+          <div className="rounded-xl border border-white/85 dark:border-[#29344B] studio-card p-4">
             {recentActivity.length === 0 ? (
               <div className="py-8 text-center">
                 <History className="w-6 h-6 text-[#747D91] mx-auto mb-2" />
@@ -422,7 +422,7 @@ export const DashboardPage: React.FC = () => {
       </div>
 
       {/* E. QR Analytics Overview */}
-      <section className="rounded-2xl bg-white/82 dark:bg-[#121A2D] backdrop-blur-md border border-white/85 dark:border-[#29344B] studio-card p-6">
+      <section className="rounded-2xl border border-white/85 dark:border-[#29344B] studio-card p-6">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
             <h3 className="font-display font-bold text-lg text-[#171B2B] dark:text-[#F5F6FC]">
@@ -484,7 +484,7 @@ export const DashboardPage: React.FC = () => {
           <button
             type="button"
             onClick={() => navigate('templates')}
-            className="px-3 py-1 rounded-full bg-white/85 dark:bg-[#17223B]/85 backdrop-blur-md border border-white/90 dark:border-[#232F4A] text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs inline-flex items-center gap-1 transition-colors"
+            className="px-3 py-1 rounded-full bg-white/65 dark:bg-white/10 border border-white/85 dark:border-white/20 text-xs font-semibold text-[#5538EE] dark:text-[#8B7BFF] hover:border-[#5D4CEB] shadow-xs inline-flex items-center gap-1 transition-colors"
           >
             View All Templates <ArrowRight className="w-3.5 h-3.5" />
           </button>
@@ -494,7 +494,7 @@ export const DashboardPage: React.FC = () => {
           {featuredTemplates.map((tpl) => (
             <div
               key={tpl.id}
-              className="rounded-xl bg-white/82 dark:bg-[#121A2D] backdrop-blur-md border border-white/85 dark:border-[#29344B] studio-card p-4 flex flex-col items-center text-center"
+              className="rounded-xl border border-white/85 dark:border-[#29344B] studio-card p-4 flex flex-col items-center text-center"
             >
               <QRPreviewCard data={tpl.sampleValue} style={tpl.style} size={136} bordered={false} />
               <div className="mt-3 font-semibold text-sm text-[#171B2B] dark:text-[#F5F6FC]">

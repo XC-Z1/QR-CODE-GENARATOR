@@ -33,6 +33,14 @@
     --accent-blue: #3984F6;
   }
 
+  html {
+    background-color: #EAE8FF;
+  }
+
+  html.dark {
+    background-color: #07090E;
+  }
+
   html,
   body,
   button,
@@ -68,103 +76,101 @@
 .studio-fixed-bg {
   background-color: #EAE8FF;
   background-image:
-    linear-gradient(180deg, rgba(246, 246, 255, 0.22) 0%, rgba(238, 240, 255, 0.14) 100%),
+    linear-gradient(180deg, rgba(246, 246, 255, 0.16) 0%, rgba(238, 240, 255, 0.10) 100%),
     url('/assets/aistudio/file_0000000032c0820885a040a758c08d7f_e712cde6.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  height: 100vh;
-  height: 100lvh;
 }
 
 .dark .studio-fixed-bg {
   background-color: #07090E;
   background-image:
-    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.03) 0%, rgba(6, 8, 13, 0.2) 70%, rgba(5, 7, 12, 0.38) 100%),
+    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.04) 0%, rgba(6, 8, 13, 0.18) 70%, rgba(5, 7, 12, 0.34) 100%),
     url('/assets/aistudio/04bf72dbd6c361e9725de9d612c9016b_07f021cc.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh;
-  height: 100lvh;
 }
 
 /* Frosted Translucent Glassmorphism (Light Mode) */
 :root:not(.dark) .studio-glass-hero {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.82) 0%,
-    rgba(247, 248, 255, 0.62) 52%,
-    rgba(235, 238, 255, 0.48) 100%
+    rgba(255, 255, 255, 0.50) 0%,
+    rgba(244, 246, 255, 0.30) 52%,
+    rgba(235, 238, 255, 0.22) 100%
   );
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-  border: 1.5px solid rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.88);
   box-shadow:
     inset 0 1.5px 1.5px rgba(255, 255, 255, 0.96),
-    inset 0 0 28px rgba(255, 255, 255, 0.38),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.38),
+    inset 0 0 28px rgba(255, 255, 255, 0.32),
+    inset 0 -1px 1px rgba(130, 115, 245, 0.16),
     0 20px 44px -16px rgba(58, 45, 160, 0.22);
 }
 
 :root:not(.dark) .studio-card {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.78) 0%,
-    rgba(245, 246, 255, 0.56) 100%
+    rgba(255, 255, 255, 0.54) 0%,
+    rgba(242, 245, 255, 0.32) 100%
   );
-  backdrop-filter: blur(12px) saturate(145%);
-  -webkit-backdrop-filter: blur(12px) saturate(145%);
+  backdrop-filter: blur(12px) saturate(170%);
+  -webkit-backdrop-filter: blur(12px) saturate(170%);
   border-color: rgba(255, 255, 255, 0.88);
   box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.92),
+    inset 0 1px 1px rgba(255, 255, 255, 0.94),
+    inset 0 -1px 1px rgba(130, 115, 245, 0.12),
     0 10px 28px -12px rgba(45, 35, 130, 0.14);
 }
 
 :root:not(.dark) .studio-chrome {
-  background: rgba(255, 255, 255, 0.68);
-  backdrop-filter: blur(14px) saturate(150%);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(14px) saturate(170%);
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  border-color: rgba(255, 255, 255, 0.84);
 }
 
 /* Frosted Translucent Smoked Glassmorphism (Dark Mode) */
 .dark .studio-glass-hero {
   background: linear-gradient(
     135deg,
-    rgba(36, 42, 66, 0.66) 0%,
-    rgba(20, 25, 42, 0.54) 52%,
-    rgba(52, 60, 94, 0.38) 100%
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(24, 30, 52, 0.32) 48%,
+    rgba(255, 255, 255, 0.07) 100%
   );
-  backdrop-filter: blur(24px) saturate(150%);
-  -webkit-backdrop-filter: blur(24px) saturate(150%);
-  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(14px) saturate(160%) brightness(1.08);
+  -webkit-backdrop-filter: blur(14px) saturate(160%) brightness(1.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.30);
   box-shadow:
-    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.32),
-    inset 0 0 32px rgba(255, 255, 255, 0.08),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.38),
+    inset 0 0 28px rgba(255, 255, 255, 0.08),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.10),
     0 22px 44px -16px rgba(0, 0, 0, 0.72);
 }
 
 .dark .studio-card {
   background: linear-gradient(
     135deg,
-    rgba(34, 40, 62, 0.66) 0%,
-    rgba(18, 22, 36, 0.52) 100%
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(18, 23, 40, 0.36) 100%
   );
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border-color: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(11px) saturate(150%) brightness(1.06);
+  -webkit-backdrop-filter: blur(11px) saturate(150%) brightness(1.06);
+  border-color: rgba(255, 255, 255, 0.25);
   box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.24),
+    inset 0 1px 1px rgba(255, 255, 255, 0.28),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.06),
     0 12px 30px -12px rgba(0, 0, 0, 0.62);
 }
 
 .dark .studio-chrome {
-  background: rgba(16, 20, 32, 0.62);
-  backdrop-filter: blur(14px) saturate(145%);
-  -webkit-backdrop-filter: blur(14px) saturate(145%);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(16, 20, 34, 0.44);
+  backdrop-filter: blur(14px) saturate(150%) brightness(1.05);
+  -webkit-backdrop-filter: blur(14px) saturate(150%) brightness(1.05);
+  border-color: rgba(255, 255, 255, 0.20);
 }
 
 .studio-btn-primary {
