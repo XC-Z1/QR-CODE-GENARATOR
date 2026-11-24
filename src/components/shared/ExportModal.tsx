@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import type { ExportFormat, QRContentType, QRStyleConfig } from '../../types/qr';
 import { exportQRCode, copyQRImageToClipboard, renderCompositeQRCanvas } from '../../utils/qrRenderer';
-import { QRPreviewCard } from './QRPreviewCard';
+import { ExportTabletPreview } from './ExportTabletPreview';
 import { useStudio } from '../../hooks/useStudioState';
 
 interface ExportModalProps {
@@ -213,16 +213,14 @@ export const ExportModal: React.FC<ExportModalProps> = ({
           </div>
 
           <div className="p-6 overflow-y-auto grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div className="md:col-span-5 flex flex-col items-center justify-center bg-[#F5F6FA] dark:bg-[#0C1120] rounded-xl p-5 border border-[#E5E8F0] dark:border-[#29344B]">
-              <QRPreviewCard
+            <div className="md:col-span-5 flex flex-col items-center justify-center bg-[#F5F6FA] dark:bg-[#0C1120] rounded-xl p-4 sm:p-5 border border-[#E5E8F0] dark:border-[#29344B]">
+              <ExportTabletPreview
                 data={encodedValue}
-                style={{
-                  ...style,
-                  transparentBackground:
-                    format === 'png-transparent' ? true : format === 'jpg' ? false : transparent,
-                }}
-                size={210}
-                bordered={false}
+                style={style}
+                label={filename || qrName}
+                transparent={
+                  format === 'png-transparent' ? true : format === 'jpg' ? false : transparent
+                }
               />
               <div className="mt-4 w-full grid grid-cols-2 gap-2">
                 <button
