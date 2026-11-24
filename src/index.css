@@ -101,8 +101,8 @@
     rgba(244, 246, 255, 0.30) 52%,
     rgba(235, 238, 255, 0.22) 100%
   );
-  backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
   border: 1.5px solid rgba(255, 255, 255, 0.88);
   box-shadow:
     inset 0 1.5px 1.5px rgba(255, 255, 255, 0.96),
@@ -117,8 +117,8 @@
     rgba(255, 255, 255, 0.54) 0%,
     rgba(242, 245, 255, 0.32) 100%
   );
-  backdrop-filter: blur(12px) saturate(170%);
   -webkit-backdrop-filter: blur(12px) saturate(170%);
+  backdrop-filter: blur(12px) saturate(170%);
   border-color: rgba(255, 255, 255, 0.88);
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.94),
@@ -128,8 +128,8 @@
 
 :root:not(.dark) .studio-chrome {
   background: rgba(255, 255, 255, 0.48);
-  backdrop-filter: blur(14px) saturate(170%);
   -webkit-backdrop-filter: blur(14px) saturate(170%);
+  backdrop-filter: blur(14px) saturate(170%);
   border-color: rgba(255, 255, 255, 0.84);
 }
 
@@ -141,8 +141,8 @@
     rgba(24, 30, 52, 0.32) 48%,
     rgba(255, 255, 255, 0.07) 100%
   );
-  backdrop-filter: blur(14px) saturate(160%) brightness(1.08);
   -webkit-backdrop-filter: blur(14px) saturate(160%) brightness(1.08);
+  backdrop-filter: blur(14px) saturate(160%) brightness(1.08);
   border: 1.5px solid rgba(255, 255, 255, 0.30);
   box-shadow:
     inset 0 1.5px 1.5px rgba(255, 255, 255, 0.38),
@@ -157,8 +157,8 @@
     rgba(255, 255, 255, 0.12) 0%,
     rgba(18, 23, 40, 0.36) 100%
   );
-  backdrop-filter: blur(11px) saturate(150%) brightness(1.06);
   -webkit-backdrop-filter: blur(11px) saturate(150%) brightness(1.06);
+  backdrop-filter: blur(11px) saturate(150%) brightness(1.06);
   border-color: rgba(255, 255, 255, 0.25);
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.28),
@@ -168,8 +168,8 @@
 
 .dark .studio-chrome {
   background: rgba(16, 20, 34, 0.44);
-  backdrop-filter: blur(14px) saturate(150%) brightness(1.05);
   -webkit-backdrop-filter: blur(14px) saturate(150%) brightness(1.05);
+  backdrop-filter: blur(14px) saturate(150%) brightness(1.05);
   border-color: rgba(255, 255, 255, 0.20);
 }
 
