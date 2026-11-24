@@ -81,11 +81,13 @@ export const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <section className="rounded-3xl studio-glass-hero p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+      <section className="rounded-3xl studio-glass-hero p-6 sm:p-8 lg:p-10 relative">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-10 -top-12 w-72 h-72 rounded-full bg-[#4F46E5]/30 dark:bg-white/6 blur-3xl"
-        />
+          className="pointer-events-none absolute inset-0 rounded-[inherit] overflow-hidden"
+        >
+          <div className="absolute -right-10 -top-12 w-72 h-72 rounded-full bg-[#4F46E5]/26 dark:bg-white/6 blur-3xl" />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
           <div className="lg:col-span-7 space-y-5">
             <div className="text-xs sm:text-sm font-semibold tracking-wide text-[#5538EE] dark:text-[#8B7BFF]">

@@ -53,10 +53,10 @@ const ActivePageRouter: React.FC = () => {
     <AnimatePresence mode="wait">
       <motion.div
         key={route}
-        initial={{ opacity: 0, y: 4 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -2 }}
-        transition={{ duration: 0.12 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.14 }}
       >
         {renderPage()}
       </motion.div>

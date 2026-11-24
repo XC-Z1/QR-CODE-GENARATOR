@@ -137,13 +137,14 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
   };
 
   return (
-    <div className="min-h-screen flex relative isolate bg-[#EAE8FF] dark:bg-[#07090E] text-[#0F172A] dark:text-[#F4F7FF] transition-colors">
-      {/* Viewport-locked background image layer so background stays stationary on scroll */}
+    <>
+      {/* Viewport-locked background image layer (separate from shell stacking context for reliable mobile backdrop-filter) */}
       <div
         aria-hidden="true"
-        className="studio-fixed-bg fixed inset-0 -z-10 pointer-events-none"
+        className="studio-fixed-bg fixed inset-0 z-0 pointer-events-none"
       />
-      {/* Desktop Collapsible Sidebar */}
+      <div className="min-h-screen flex relative z-10 text-[#0F172A] dark:text-[#F4F7FF] transition-colors">
+        {/* Desktop Collapsible Sidebar */}
       <aside
         aria-label="Primary navigation"
         className={`hidden lg:flex flex-col shrink-0 border-r border-white/80 dark:border-[#232F4A] studio-chrome bg-white/60 dark:bg-[#11192C] backdrop-blur-xl sticky top-0 h-screen transition-[width] duration-200 ${
@@ -520,6 +521,7 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
           <span>More</span>
         </button>
       </nav>
-    </div>
+      </div>
+    </>
   );
 };
