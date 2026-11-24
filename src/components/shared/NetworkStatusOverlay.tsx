@@ -34,11 +34,14 @@ export const NetworkStatusOverlay: React.FC = () => {
       }
     };
 
-    void preloadAsset(OFFLINE_IMAGE_SRC, setOfflineUrl);
-    void preloadAsset(ONLINE_IMAGE_SRC, setOnlineUrl);
+    const timer = window.setTimeout(() => {
+      void preloadAsset(OFFLINE_IMAGE_SRC, setOfflineUrl);
+      void preloadAsset(ONLINE_IMAGE_SRC, setOnlineUrl);
+    }, 1200);
 
     return () => {
       active = false;
+      window.clearTimeout(timer);
       createdUrls.forEach((url) => URL.revokeObjectURL(url));
     };
   }, []);

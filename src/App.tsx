@@ -1,5 +1,4 @@
 import React from 'react';
-import { AnimatePresence, motion } from 'motion/react';
 import { StudioProvider, useStudio } from './hooks/useStudioState';
 import { ErrorBoundary } from './components/shared/ErrorBoundary';
 import { AppShell } from './components/layout/AppShell';
@@ -20,48 +19,32 @@ import { HelpCenterPage } from './pages/HelpCenterPage';
 const ActivePageRouter: React.FC = () => {
   const { route } = useStudio();
 
-  const renderPage = () => {
-    switch (route) {
-      case 'dashboard':
-        return <DashboardPage />;
-      case 'generator':
-        return <GeneratorPage />;
-      case 'image-to-qr':
-        return <ImageToQRPage />;
-      case 'templates':
-        return <TemplatesPage />;
-      case 'scanner':
-        return <ScannerPage />;
-      case 'library':
-        return <LibraryPage />;
-      case 'favorites':
-        return <FavoritesPage />;
-      case 'activity':
-        return <ActivityPage />;
-      case 'analytics':
-        return <AnalyticsPage />;
-      case 'settings':
-        return <SettingsPage />;
-      case 'help':
-        return <HelpCenterPage />;
-      default:
-        return <DashboardPage />;
-    }
-  };
-
-  return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={route}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.14 }}
-      >
-        {renderPage()}
-      </motion.div>
-    </AnimatePresence>
-  );
+  switch (route) {
+    case 'dashboard':
+      return <DashboardPage />;
+    case 'generator':
+      return <GeneratorPage />;
+    case 'image-to-qr':
+      return <ImageToQRPage />;
+    case 'templates':
+      return <TemplatesPage />;
+    case 'scanner':
+      return <ScannerPage />;
+    case 'library':
+      return <LibraryPage />;
+    case 'favorites':
+      return <FavoritesPage />;
+    case 'activity':
+      return <ActivityPage />;
+    case 'analytics':
+      return <AnalyticsPage />;
+    case 'settings':
+      return <SettingsPage />;
+    case 'help':
+      return <HelpCenterPage />;
+    default:
+      return <DashboardPage />;
+  }
 };
 
 export default function App() {

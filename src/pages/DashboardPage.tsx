@@ -86,7 +86,7 @@ export const DashboardPage: React.FC = () => {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 rounded-[inherit] overflow-hidden"
         >
-          <div className="absolute -right-10 -top-12 w-72 h-72 rounded-full bg-[#4F46E5]/26 dark:bg-white/6 blur-3xl" />
+          <div className="absolute -right-10 -top-12 w-72 h-72 rounded-full bg-[radial-gradient(circle,rgba(79,70,229,0.22)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
           <div className="lg:col-span-7 space-y-5">
@@ -127,7 +127,7 @@ export const DashboardPage: React.FC = () => {
             <div className="relative flex flex-col items-center">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-4 rounded-full bg-[#7C65FF]/25 dark:bg-white/10 blur-2xl"
+                className="pointer-events-none absolute -inset-2 rounded-full bg-[radial-gradient(circle,rgba(124,101,255,0.24)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(255,255,255,0.09)_0%,transparent_70%)]"
               />
               <button
                 type="button"
@@ -138,11 +138,13 @@ export const DashboardPage: React.FC = () => {
                 <img
                   src="/assets/aistudio/file_00000000dc688211b368d8e89d14d5bb_3368063a.png"
                   alt="3D Violet Crystal QR Code Studio Showcase"
+                  decoding="async"
                   className="qr-light-crystal-wrap block dark:hidden w-52 sm:w-60 h-auto select-none"
                 />
                 <img
                   src="/assets/aistudio/file_000000002f7c8208bf47cf04e18b5821_839af33a.png"
                   alt="3D Dark Crystal QR Code Studio Showcase"
+                  decoding="async"
                   className="qr-dark-crystal-wrap hidden dark:block w-52 sm:w-60 h-auto select-none"
                 />
               </button>
@@ -186,7 +188,7 @@ export const DashboardPage: React.FC = () => {
           return (
             <div
               key={card.label}
-              className="rounded-xl bg-white/82 dark:bg-[#11192C] backdrop-blur-md border border-white/85 dark:border-[#232F4A] studio-card hover:-translate-y-0.5 transition-all p-5 flex flex-col justify-between"
+              className="rounded-xl bg-white/82 dark:bg-[#11192C] border border-white/85 dark:border-[#232F4A] studio-card hover:-translate-y-0.5 transition-[transform,border-color] duration-150 p-5 flex flex-col justify-between"
             >
               <div className="flex items-center justify-between gap-2 mb-3">
                 <span className="text-xs font-semibold text-[#5C667E] dark:text-[#A4ADC1]">
@@ -229,7 +231,7 @@ export const DashboardPage: React.FC = () => {
                 key={item.type}
                 type="button"
                 onClick={() => openInGenerator({ type: item.type })}
-                className="group rounded-xl bg-white/82 dark:bg-[#11192C] backdrop-blur-md border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-all"
+                className="group rounded-xl bg-white/82 dark:bg-[#11192C] border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
               >
                 <div className="w-9 h-9 rounded-lg bg-[#F0F2F8] dark:bg-[#19243A] text-[#5538EE] dark:text-[#8978FF] flex items-center justify-center group-hover:bg-[#5538EE] group-hover:text-white transition-colors">
                   <Icon className="w-4 h-4" />
@@ -243,7 +245,7 @@ export const DashboardPage: React.FC = () => {
           <button
             type="button"
             onClick={() => openInGenerator({ type: 'calendar-event' })}
-            className="group rounded-xl bg-white/82 dark:bg-[#11192C] backdrop-blur-md border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-all"
+            className="group rounded-xl bg-white/82 dark:bg-[#11192C] border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
           >
             <div className="w-9 h-9 rounded-lg bg-[#F0F2F8] dark:bg-[#19243A] text-[#747D91] dark:text-[#A4ADC1] flex items-center justify-center group-hover:bg-[#5538EE] group-hover:text-white transition-colors">
               <MoreHorizontal className="w-4 h-4" />
