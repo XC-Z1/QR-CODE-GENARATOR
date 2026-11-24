@@ -231,7 +231,7 @@ export const DashboardPage: React.FC = () => {
                 key={item.type}
                 type="button"
                 onClick={() => openInGenerator({ type: item.type })}
-                className="group rounded-xl border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
+                className="group rounded-xl border border-white/85 dark:border-[#232F4A] studio-glass-tile hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
               >
                 <div className="w-9 h-9 rounded-lg bg-[#F0F2F8] dark:bg-[#19243A] text-[#5538EE] dark:text-[#8978FF] flex items-center justify-center group-hover:bg-[#5538EE] group-hover:text-white transition-colors">
                   <Icon className="w-4 h-4" />
@@ -245,7 +245,7 @@ export const DashboardPage: React.FC = () => {
           <button
             type="button"
             onClick={() => openInGenerator({ type: 'calendar-event' })}
-            className="group rounded-xl border border-white/85 dark:border-[#232F4A] studio-card hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
+            className="group rounded-xl border border-white/85 dark:border-[#232F4A] studio-glass-tile hover:border-[#5D4CEB] dark:hover:border-[#8B7BFF] hover:-translate-y-0.5 p-3.5 flex flex-col items-center justify-center gap-2 text-center transition-[transform,border-color] duration-150"
           >
             <div className="w-9 h-9 rounded-lg bg-[#F0F2F8] dark:bg-[#19243A] text-[#747D91] dark:text-[#A4ADC1] flex items-center justify-center group-hover:bg-[#5538EE] group-hover:text-white transition-colors">
               <MoreHorizontal className="w-4 h-4" />

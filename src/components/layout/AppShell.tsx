@@ -138,10 +138,10 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
 
   return (
     <>
-      {/* Viewport-locked background image layer (root -z-10 avoids stacking-context isolation for Android Chrome backdrop-filter) */}
+      {/* Viewport-locked background image layer (root -z-10 + 100lvh prevents Android Chrome URL-bar resize jump & preserves backdrop-filter) */}
       <div
         aria-hidden="true"
-        className="studio-fixed-bg fixed inset-0 -z-10 pointer-events-none"
+        className="studio-fixed-bg fixed top-0 left-0 right-0 -z-10 pointer-events-none"
       />
       <div className="min-h-screen flex text-[#0F172A] dark:text-[#F4F7FF]">
         {/* Desktop Collapsible Sidebar */}
